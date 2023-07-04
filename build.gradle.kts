@@ -5,15 +5,27 @@ plugins {
 }
 
 group = "com.orbitasolutions"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.9-SNAPSHOT"
 
 repositories {
     mavenLocal()
     mavenCentral()
+    flatDir {
+        dirs("libs")
+    }
+}
+
+repositories {
+
 }
 
 dependencies {
-   implementation("com.orbitasolutions:geleia:0.0.1-SNAPSHOT")
+//   implementation("com.orbitasolutions:geleia:0.0.23-SNAPSHOT")
+//    api(files("libs/geleia-jvm-0.0.28-SNAPSHOT.jar"))
+    api(":geleia-jvm-0.0.28-SNAPSHOT")
+
+    implementation("org.jetbrains.compose.desktop:desktop:1.2.2")
+    implementation("org.jetbrains.compose.desktop:desktop-jvm-macos-arm64:1.2.2")
 }
 
 kotlin {
