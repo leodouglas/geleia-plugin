@@ -11,17 +11,16 @@ plugins {
 apply(plugin = "signing")
 
 group = "com.orbitasolutions"
-version = "0.1.1"
+version = "0.2.8"
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
-    implementation("com.orbitasolutions:geleia:0.1.0")
-
+    implementation("com.orbitasolutions:geleia:0.2.8")
     implementation("org.jetbrains.compose.desktop:desktop:1.2.2")
-    implementation("org.jetbrains.compose.desktop:desktop-jvm-macos-arm64:1.2.2")
 }
 
 kotlin {
